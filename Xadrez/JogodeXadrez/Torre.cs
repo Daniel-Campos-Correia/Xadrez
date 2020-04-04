@@ -35,7 +35,7 @@ namespace Xadrez.JogodeXadrez
             while (Tabuleiro.PosicaoValida(pos) && PodeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
-                if (Tabuleiro.Peca(pos) != null)
+                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(Posicao).Cor!=Cor)
                 {
                     break;
                 }
@@ -46,7 +46,7 @@ namespace Xadrez.JogodeXadrez
             while (Tabuleiro.PosicaoValida(pos) && PodeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
-                if (Tabuleiro.Peca(pos) != null)
+                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(Posicao).Cor != Cor)
                 {
                     break;
                 }
@@ -57,7 +57,7 @@ namespace Xadrez.JogodeXadrez
             while (Tabuleiro.PosicaoValida(pos) && PodeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
-                if (Tabuleiro.Peca(pos) != null)
+                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(Posicao).Cor != Cor)
                 {
                     break;
                 }
@@ -68,7 +68,7 @@ namespace Xadrez.JogodeXadrez
             while (Tabuleiro.PosicaoValida(pos) && PodeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
-                if (Tabuleiro.Peca(pos) != null)
+                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(Posicao).Cor != Cor)
                 {
                     break;
                 }

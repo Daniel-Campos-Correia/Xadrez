@@ -27,7 +27,39 @@ namespace Xadrez
             Console.WriteLine("  a b c d e f g h");
             
         }
+        public static void ImprimirPartida(PartidadeXadrez partidadeXadrez)
+        {
+            Console.Clear();
+            Tela.ImprimirTabuleiro(partidadeXadrez.Tab);
+            Console.WriteLine();
+            ImprimirPecasCapturadas(partidadeXadrez);
+            Console.WriteLine("Turno: " + partidadeXadrez.Turno);
+            Console.WriteLine("Aguardando Jogada: " + partidadeXadrez.JogadorAtual);
+        }
 
+        public static void ImprimirPecasCapturadas(PartidadeXadrez partidadeXadrez)
+        {
+            Console.WriteLine("Peças Capturadas: ");
+            Console.Write("Brancas: ");
+            ImprimirConjunto(partidadeXadrez.PecasCapturadas(Cor.Branco));
+            Console.WriteLine();
+            Console.Write("Pretas: ");
+            ConsoleColor aux = Console.ForegroundColor;
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            ImprimirConjunto(partidadeXadrez.PecasCapturadas(Cor.Preta));
+            Console.ForegroundColor = aux;
+            Console.WriteLine();
+
+        }
+        public static void ImprimirConjunto(HashSet<Peca> conjunto)
+        {
+            Console.Write("[");
+            foreach (Peca x in conjunto)
+            {
+                Console.Write(x+" ");
+            }
+            Console.Write("]");
+        }
         public static void ImprimirTabuleiro(Tabuleiro tabuleiro, bool[,] posicoesPossiveis)
         {
             for (int i = 0; i < tabuleiro.Linhas; i++)
