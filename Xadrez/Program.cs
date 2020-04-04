@@ -11,6 +11,10 @@ namespace Xadrez
     {
         static void Main(string[] args)
         {
+            PosicaoXadrez pos = new PosicaoXadrez('a', 1);
+            Console.WriteLine(pos);
+            Console.WriteLine(pos.ToPosicao());
+
             try
             {
                 Tabuleiro tab = new Tabuleiro(8, 8);
