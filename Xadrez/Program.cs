@@ -1,5 +1,9 @@
 ﻿using System;
 using Xadrez.tabuleiro;
+using Xadrez.JogodeXadrez;
+using Xadrez.tabuleiro.Enum;
+
+
 
 namespace Xadrez
 {
@@ -7,9 +11,11 @@ namespace Xadrez
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
 
             Tabuleiro tab = new Tabuleiro(8, 8);
+            tab.colocarPeca(new Torre(tab, Cor.Preta), new Posicao(0, 0));
+            tab.colocarPeca(new Torre(tab, Cor.Preta), new Posicao(1, 3));
+            tab.colocarPeca(new Torre(tab, Cor.Preta), new Posicao(2, 4));
             Tela.ImprimirTabuleiro(tab);
         }
     }
