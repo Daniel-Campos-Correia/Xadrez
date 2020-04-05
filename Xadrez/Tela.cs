@@ -34,10 +34,19 @@ namespace Xadrez
             Console.WriteLine();
             ImprimirPecasCapturadas(partidadeXadrez);
             Console.WriteLine("Turno: " + partidadeXadrez.Turno);
-            Console.WriteLine("Aguardando Jogada: " + partidadeXadrez.JogadorAtual);
-            if(partidadeXadrez.Xeque)
+
+            if (!partidadeXadrez.Terminada)
             {
-                Console.WriteLine("XEQUE");
+                Console.WriteLine("Aguardando Jogada: " + partidadeXadrez.JogadorAtual);
+                if (partidadeXadrez.Xeque)
+                {
+                    Console.WriteLine("XEQUE");
+                }
+            }
+            else
+            {
+                Console.WriteLine("XEQUEMATE!");
+                Console.WriteLine("Vencedor: " + partidadeXadrez.JogadorAtual);
             }
         }
 

@@ -51,6 +51,9 @@ namespace Xadrez
 
                     }
                 }
+
+                Console.Clear();
+                Tela.ImprimirPartida(partidadeXadrez);
             }
             catch(TabuleiroException e)
             {
