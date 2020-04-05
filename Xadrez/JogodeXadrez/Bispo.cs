@@ -40,6 +40,8 @@ namespace Xadrez.JogodeXadrez
                     break;
                 }
                 pos.Coluna = pos.Coluna + 1;
+                pos.Linha = pos.Linha - 1;
+            
             }
             //Se
             pos.DefinirValores(Posicao.Linha + 1, Posicao.Coluna + 1);

@@ -34,7 +34,7 @@ namespace Xadrez.JogodeXadrez
             while (Tabuleiro.PosicaoValida(pos) && PodeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
-                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(Posicao).Cor != Cor)
+                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(Posicao).Cor == Cor)
                 {
                     break;
                 }
@@ -45,7 +45,7 @@ namespace Xadrez.JogodeXadrez
             while (Tabuleiro.PosicaoValida(pos) && PodeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
-                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(Posicao).Cor != Cor)
+                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(Posicao).Cor == Cor)
                 {
                     break;
                 }
@@ -56,7 +56,7 @@ namespace Xadrez.JogodeXadrez
             while (Tabuleiro.PosicaoValida(pos) && PodeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
-                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(Posicao).Cor != Cor)
+                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(Posicao).Cor == Cor)
                 {
                     break;
                 }
@@ -67,7 +67,7 @@ namespace Xadrez.JogodeXadrez
             while (Tabuleiro.PosicaoValida(pos) && PodeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
-                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(Posicao).Cor != Cor)
+                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(Posicao).Cor == Cor)
                 {
                     break;
                 }
@@ -78,18 +78,19 @@ namespace Xadrez.JogodeXadrez
             while (Tabuleiro.PosicaoValida(pos) && PodeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
-                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(Posicao).Cor != Cor)
+                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(Posicao).Cor == Cor)
                 {
                     break;
                 }
                 pos.Coluna = pos.Coluna + 1;
+                pos.Linha = pos.Linha - 1;
             }
             //Se
             pos.DefinirValores(Posicao.Linha + 1, Posicao.Coluna + 1);
             while (Tabuleiro.PosicaoValida(pos) && PodeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
-                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(Posicao).Cor != Cor)
+                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(Posicao).Cor == Cor)
                 {
                     break;
                 }
@@ -101,7 +102,7 @@ namespace Xadrez.JogodeXadrez
             while (Tabuleiro.PosicaoValida(pos) && PodeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
-                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(Posicao).Cor != Cor)
+                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(Posicao).Cor == Cor)
                 {
                     break;
                 }
@@ -113,7 +114,7 @@ namespace Xadrez.JogodeXadrez
             while (Tabuleiro.PosicaoValida(pos) && PodeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
-                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(Posicao).Cor != Cor)
+                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(Posicao).Cor == Cor)
                 {
                     break;
                 }
