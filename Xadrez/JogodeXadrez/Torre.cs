@@ -22,7 +22,7 @@ namespace Xadrez.JogodeXadrez
         private bool PodeMover(Posicao pos)
         {
             Peca p = Tabuleiro.Peca(pos);
-            return p == null || p.Cor != Cor;
+            return p == null || p.Cor != this.Cor;
 
         }
         public override bool[,] MovimentosPossiveis()
@@ -35,7 +35,7 @@ namespace Xadrez.JogodeXadrez
             while (Tabuleiro.PosicaoValida(pos) && PodeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
-                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(Posicao).Cor!=Cor)
+                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(Posicao).Cor!=this.Cor)
                 {
                     break;
                 }
@@ -46,18 +46,19 @@ namespace Xadrez.JogodeXadrez
             while (Tabuleiro.PosicaoValida(pos) && PodeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
-                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(Posicao).Cor != Cor)
+                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(Posicao).Cor != this.Cor)
                 {
                     break;
                 }
                 pos.Linha = pos.Linha + 1;
             }
+
             //Esquerda
             pos.DefinirValores(Posicao.Linha, Posicao.Coluna - 1);
             while (Tabuleiro.PosicaoValida(pos) && PodeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
-                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(Posicao).Cor != Cor)
+                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(Posicao).Cor != this.Cor)
                 {
                     break;
                 }
@@ -68,7 +69,7 @@ namespace Xadrez.JogodeXadrez
             while (Tabuleiro.PosicaoValida(pos) && PodeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
-                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(Posicao).Cor != Cor)
+                if (Tabuleiro.Peca(pos) != null && Tabuleiro.Peca(Posicao).Cor != this.Cor)
                 {
                     break;
                 }

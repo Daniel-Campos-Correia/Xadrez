@@ -76,11 +76,12 @@ namespace Xadrez
         }
         public static void ImprimirTabuleiro(Tabuleiro tabuleiro, bool[,] posicoesPossiveis)
         {
+            ConsoleColor fundoOriginal = Console.BackgroundColor;
+            ConsoleColor fundoAlterado = ConsoleColor.DarkGray;
             for (int i = 0; i < tabuleiro.Linhas; i++)
             {
-                ConsoleColor fundoOriginal = Console.BackgroundColor;
-                ConsoleColor fundoAlterado = ConsoleColor.DarkGray;
 
+                Console.BackgroundColor = fundoOriginal;
                 Console.Write(8 - i + " ");
                 for (int j = 0; j < tabuleiro.Colunas; j++)
                 {
@@ -101,6 +102,7 @@ namespace Xadrez
                 Console.WriteLine();
             }
 
+            Console.BackgroundColor = fundoOriginal;
             Console.WriteLine("  a b c d e f g h");
 
         }

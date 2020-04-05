@@ -15,7 +15,7 @@ namespace Xadrez.JogodeXadrez
 
         public override string ToString()
         {
-            return "Q";
+            return "D";
         }
 
         private bool PodeMover(Posicao pos)
